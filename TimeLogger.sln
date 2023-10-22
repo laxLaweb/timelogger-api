@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimeLogger", "TimeLogger\TimeLogger.csproj", "{50B44C39-B263-4874-8110-937CBFD08D94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeLogger.UnitTests", "TimeLogger.UnitTests\TimeLogger.UnitTests.csproj", "{9FA3DA2A-AC78-4D0C-90D9-722091193F89}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50B44C39-B263-4874-8110-937CBFD08D94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50B44C39-B263-4874-8110-937CBFD08D94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50B44C39-B263-4874-8110-937CBFD08D94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50B44C39-B263-4874-8110-937CBFD08D94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FA3DA2A-AC78-4D0C-90D9-722091193F89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FA3DA2A-AC78-4D0C-90D9-722091193F89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FA3DA2A-AC78-4D0C-90D9-722091193F89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FA3DA2A-AC78-4D0C-90D9-722091193F89}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {868281DB-C646-44F5-BE87-5D0A7C6EAF18}
+	EndGlobalSection
+EndGlobal
