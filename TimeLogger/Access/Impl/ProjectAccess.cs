@@ -55,8 +55,8 @@ namespace TimeLogger.Access.Impl
             {
                 case "deadline":
                     return SortByDeadline();
-                    break;
                 case "name":
+                    // fallthrough
                 default:
                     return SortByName();
             }

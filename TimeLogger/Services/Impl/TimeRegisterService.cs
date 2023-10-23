@@ -37,11 +37,13 @@ namespace TimeLogger.Services.Impl
 
             if(timeRegister != null)
             {
+                // Update existing row in the db with the added hours
                 timeRegister.Hours += dto.Hours;
                 await timeRegisterAccess.Save(timeRegister);
             }
             else
             {
+                // Create new row in database
                 await timeRegisterAccess.AddTimeOnProject(projectId, dto.Date, dto.Hours);
             }
             

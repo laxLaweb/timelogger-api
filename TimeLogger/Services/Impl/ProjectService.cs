@@ -21,6 +21,7 @@ namespace TimeLogger.Services.Impl
 
             var projectsDto = new List<ProjectDto>();
 
+            // Converting List<Project> to List<ProjectDto>
             foreach(var project in projects)
             {
                 var projectDto = new ProjectDto();
