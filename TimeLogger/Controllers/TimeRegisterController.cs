@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using TimeLogger.Dto;
@@ -44,7 +45,7 @@ namespace TimeLogger.Controllers
             {
                 return BadRequest("Hours could not be negative");
             }
-            if((dto.Hours * 100) % 50 == 0)
+            if((dto.Hours * 100) % 50 != 0)
             {
                 return BadRequest("Hours can only have 0 or 5 after comma");
             }
@@ -53,6 +54,15 @@ namespace TimeLogger.Controllers
             {
                 return BadRequest("Hours could not be above 24");
             }
+
+            string dateFormat = "yyyy-MM-dd";
+
+            // Try to parse the date string using the specified format
+            if (!DateTime.TryParseExact(dto.Date, dateFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate))
+            {
+                return BadRequest("Invalid date format YYYY-mm-dd is allowed");
+            }
+
 
             await timeRegisterService.AddTimeOnProject(projectId, dto);
             return StatusCode(201);
